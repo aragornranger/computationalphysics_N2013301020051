@@ -1,0 +1,35 @@
+<h1 id="readme-for-aragornrangercomputationalphysicsn2013301020051">Readme for aragornranger/computationalphysics_N2013301020051</h1>
+
+
+
+<h2 id="assignments">Assignments</h2>
+
+<p>Below lies link to my report for each assignment:</p>
+
+<ul>
+<li><a href="https://github.com/aragornranger/computationalphysics_N2013301020051/blob/master/assignment1.md">Assignment1</a> </li>
+</ul>
+
+<p>This is a test for latex formula:</p>
+
+
+
+<p><script id="MathJax-Element-26" type="math/tex; mode=display">\frac{\sqrt{a}}{\sin{\alpha}}</script></p>
+
+<p>Another <script id="MathJax-Element-27" type="math/tex">\sin{\omega}</script> test</p>
+
+<p>This is a test for codes:</p>
+
+<pre class="prettyprint"><code class=" hljs perl"><span class="hljs-keyword">int</span> main()
+{
+    <span class="hljs-keyword">printf</span>(<span class="hljs-string">"Hello world!\n"</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre>
+
+
+
+<pre class="prettyprint"><code class=" hljs delphi"><span class="hljs-keyword">program</span> test
+    <span class="hljs-keyword">write</span><span class="hljs-comment">(*,*)</span><span class="hljs-string">'Hello world!'</span>
+<span class="hljs-keyword">end</span> <span class="hljs-keyword">program</span> test</code></pre>
+
+<p><em>This file was edited by retext.</em></p>
