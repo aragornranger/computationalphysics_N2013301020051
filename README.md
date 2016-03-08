@@ -6,5 +6,5 @@ Below lies link to my report for each assignment:
 
 
 test for latex:
-$$frac{sqrt{a}}{sin{alpha}}$$
+$$\frac{\sqrt{a}}{\sin{\alpha}}$$
   
