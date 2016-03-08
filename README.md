@@ -11,7 +11,10 @@ I tried multiple editors to write markdown, both local and online, and finally d
 
 ![Maxwell's equation][3]
 
+![][4]
+
 
 [1]:http://stackedit.io/
 [2]:http://latex.codecogs.com/
 [3]:http://latex.codecogs.com/gif.latex?\left\{\begin{matrix} \triangledown \cdot D=\rho _f\\ \triangledown \cdot B=0\\ \triangledown \times E=-\frac{\partial B}{\partial t}\\ \triangledown \times H=J_f+\frac{\partial D}{\partial t} \end{matrix}\right.
+[4]:http://latex.codecogs.com/gif.latex?\frac{a\times B}{b}
