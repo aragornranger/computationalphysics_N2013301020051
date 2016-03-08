@@ -9,7 +9,7 @@ Below lies link to my report for each assignment:
 
 I tried multiple editors to write markdown, both local and online, and finally decided to write all my files on [stackedit][1]. Additionally, to solve the problem that GitHub doesn't support formulas written in LaTex, I used [latex.codecogs.com][2] to edit the formulas and publish them in my docs as pictures. This is not as good as writing directly in LaTex but might as well do the job. Here is a sample:
 
-![][3]
+![Maxwell's equation][3]
 
 
 [1]:http://stackedit.io/
