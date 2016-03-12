@@ -1,5 +1,5 @@
-#Readme for aragornranger/computationalphysics_N2013301020051
-
+#Readme
+Here lie the documents and files I write for my computational physics course. I am Bi Ruike, student number 2013301020051.
 ##Assignments
 Below lies link to my report for each assignment:
 
