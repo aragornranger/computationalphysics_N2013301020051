@@ -1,6 +1,6 @@
 #Assignment 3
 ##Code
-[stringdiplay.py](https://github.com/aragornranger/computationalphysics_N2013301020051/blob/master/assignment3/stringdisplay.py)
+[stringdisplay.py](https://github.com/aragornranger/computationalphysics_N2013301020051/blob/master/assignment3/stringdisplay.py)
 
 ##Description
 I used a list `cap` to store the pattern for each letter. Through finding the difference between the ASCII number of a particular letter and A, the pattern can be visited. And to print the letters I used another list `output`. To print letters in multiple lines, I initialized `output` with 
