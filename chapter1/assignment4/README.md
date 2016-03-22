@@ -1,10 +1,14 @@
 #Assignment 4
+
 ##Problem
 I chose problem 1.4 of chapter 1.
+
 ##Abstract
 In this assignment I wrote a program using the Euler method to solve a radioactive decay problem involving two types of nuclei A and B, where nuclei of type A decay into type B ones. With the program I researched the behavior of the nuclei in various initial conditions.
+
 ##Code
--  [assignment4](https://github.com/aragornranger/computationalphysics_N2013301020051/blob/master/chapter1/assignment4/asgmnt4_4.py)
+-  [assignment 4](https://github.com/aragornranger/computationalphysics_N2013301020051/blob/master/chapter1/assignment4/asgmnt4_4.py)
+
 ##Calculation
 The pattern of the decay processes of two types of nuclei can be described by the following differential equations:
 ![](http://latex.codecogs.com/gif.latex?%5Cfrac%7BdN_A%7D%7Bdt%7D%20%3D%20-%20%5Cfrac%7BN_A%7D%7B%5Ctau_A%7D)
