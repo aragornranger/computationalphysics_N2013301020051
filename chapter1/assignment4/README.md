@@ -25,7 +25,9 @@ After trying multiple sets of initial conditions I noticed that the number of nu
 ![](https://raw.githubusercontent.com/aragornranger/computationalphysics_N2013301020051/master/pictures/chapter1/1000%2C500%2C2%2C10.png)
 ![](http://latex.codecogs.com/gif.latex?N_A=1000,N_B=500,\tau_A=2,\tau_B=10)
 When ![](http://latex.codecogs.com/gif.latex?%5Cfrac%7BN_A%7D%7BN_B%7D%3E%5Cfrac%7B%5Ctau_A%7D%7B%5Ctau_B%7D), the number of type B nuclei would increase at first and then decrease after it reaches a maximum. When ![](http://latex.codecogs.com/gif.latex?%5Cfrac%7BN_A%7D%7BN_B%7D%3C%5Cfrac%7B%5Ctau_A%7D%7B%5Ctau_B%7D), it would go down directly without any increasing process.
+
 ##Acknowledgement
+
 I give my thanks to writer of [Matplotlib 教程 | 始终](http://liam0205.me/2014/09/11/matplotlib-tutorial-zh-cn/), which helped me a lot when I learn how to use matplotlib.
 
 > Written with [StackEdit](https://stackedit.io/).
