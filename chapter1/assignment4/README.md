@@ -12,10 +12,15 @@ In this assignment I wrote a program using the Euler method to solve a radioacti
 ##Calculation
 The pattern of the decay processes of two types of nuclei can be described by the following differential equations:
 ![](http://latex.codecogs.com/gif.latex?%5Cfrac%7BdN_A%7D%7Bdt%7D%20%3D%20-%20%5Cfrac%7BN_A%7D%7B%5Ctau_A%7D)
+
 ![](http://latex.codecogs.com/gif.latex?%5Cfrac%7BdN_B%7D%7Bdt%7D%20%3D%20%5Cfrac%7BN_A%7D%7B%5Ctau_A%7D%20-%20%5Cfrac%7BN_B%7D%7B%5Ctau_B%7D)
+
 where ![](http://latex.codecogs.com/gif.latex?\tau_A) and ![](http://latex.codecogs.com/gif.latex?\tau_A) are the decay time constants. Using Tayler expansion we ca obtain:
+
 ![](http://latex.codecogs.com/gif.latex?N_A%28t&plus;%5CDelta%20t%29%20%5Capprox%20N_A%28t%29%20-%20%5Cfrac%7BN_A%28t%29%7D%7B%5Ctau%7D%5CDelta%20t)
+
 ![](http://latex.codecogs.com/gif.latex?N_B%28t&plus;%5CDelta%20t%29%20%5Capprox%20N_B%28t%29%20&plus;%20%5Cfrac%7BN_A%28t%29%7D%7B%5Ctau%7D%5CDelta%20t%20-%20%5Cfrac%7BN_B%28t%29%7D%7B%5Ctau%7D%5CDelta%20t)
+
 With these two equations, given the initial conditions, it's easy to calculate the number of nuclei at a given time t.
 ##Result
 ![](https://raw.githubusercontent.com/aragornranger/computationalphysics_N2013301020051/master/pictures/chapter1/1000%2C1000%2C2%2C2.png)
