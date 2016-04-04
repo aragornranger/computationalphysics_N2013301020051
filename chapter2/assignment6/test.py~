@@ -1,0 +1,13 @@
+import cannon_shell as cs
+
+test = cs.shell(0.7,cs.np.pi / 4,100 + 273.15)
+start = 35
+for i in range(2):
+    test.set_theta_degree(start + i * 10)
+    test.trajectory_calc_drag(0.01)
+    test.draw_figure()
+    test.trajectory_calc_density(0.01)
+    test.draw_figure()
+
+test.show_figure()
+
