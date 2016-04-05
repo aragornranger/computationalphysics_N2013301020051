@@ -32,21 +32,16 @@ class shell:
         self.t = t
 
     def step_calc(self,step):
-        if self.y[-1] + self.vy[-1] * step >= 0:
-            self.x.append(self.x[-1] + self.vx[-1] * step)
-            self.vx.append(self.vx[-1])
-            self.y.append(self.y[-1] + self.vy[-1] * step)
-            self.vy.append(self.vy[-1] - self.g * step)
-            return True
-        else:
-            return False
+        self.x.append(self.x[-1] + self.vx[-1] * step)
+        self.vx.append(self.vx[-1])
+        self.y.append(self.y[-1] + self.vy[-1] * step)
+        self.vy.append(self.vy[-1] - self.g * step)
+        return self.y[-1] + self.vy[-1] * step
 
     def trajectory_calc(self,step):
     	self.__init__(self.v,self.theta,self.t)
-        go_on = self.step_calc(step)
-        while go_on == True:
-            go_on = self.step_calc(step)
-
+        while self.step_calc(step) > 0:
+            continue
 
     def draw_figure(self):
         plt.plot(self.x,self.y,lw = 1,label = r'$\theta$=%s$^{\circ}$' %self.degree)
@@ -98,11 +93,9 @@ class shell:
     def trajectory_calc_drag(self,step):
     	self.__init__(self.v,self.theta,self.t)
         self.vt = self.v
-        go_on = self.step_calc(step)
-        self.drag_calc(step)
-        while go_on == True:
-            go_on = self.step_calc(step)
+        while self.step_calc(step) > 0:
             self.drag_calc(step)
+            continue
 	
     def density_calc(self,step):
         tmp = (1 - 6.5 * self.y[-2] / self.t) ** 2.5
@@ -111,12 +104,10 @@ class shell:
         self.vt = np.sqrt(self.vx[-1] ** 2 + self.vy[-1] ** 2)
         
     def trajectory_calc_density(self,step):
-	self.__init__(self.v,self.theta,self.t)
+        self.__init__(self.v,self.theta,self.t)
         self.vt = self.v
-	go_on = self.step_calc(step)
-        self.density_calc(step)
-        while go_on == True:
-            go_on = self.step_calc(step)
-            self.density_calc(step)
+        while self.step_calc(step) > 0:
+            self.density_calc(step)        
+            continue
 
 
