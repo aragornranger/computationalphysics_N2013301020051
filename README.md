@@ -6,6 +6,7 @@ Below lies link to my report for each assignment:
 * [Assignment 1](https://github.com/aragornranger/computationalphysics_N2013301020051/blob/master/assignment1.md) 
 * [Assignment 3](https://github.com/aragornranger/computationalphysics_N2013301020051/blob/master/assignment3/README.md)
 * [Assignment 4](https://github.com/aragornranger/computationalphysics_N2013301020051/blob/master/chapter1/assignment4/README.md)
+* [Assignment 6](https://github.com/aragornranger/computationalphysics_N2013301020051/blob/master/chapter2/assignment6/README.md)
 
 ##Some other words
 
