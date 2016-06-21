@@ -8,6 +8,11 @@ Below lies link to my report for each assignment:
 * [Assignment 4](https://github.com/aragornranger/computationalphysics_N2013301020051/blob/master/chapter1/assignment4/README.md)
 * [Assignment 6](https://github.com/aragornranger/computationalphysics_N2013301020051/blob/master/chapter2/assignment6/README.md)
 
+
+*[Final Assignment](https://github.com/aragornranger/computationalphysics_N2013301020051/blob/master/final/final-assignment.pdf)
+
+Missing assignments will be added later.
+
 ##Some other words
 
 I tried multiple editors to write markdown, both local and online, and finally decided to write all my files on [stackedit][1]. Additionally, to solve the problem that GitHub doesn't support formulas written in LaTex, I used [latex.codecogs.com][2] to edit the formulas and publish them in my docs as pictures. This is not as good as writing directly in LaTex but might as well do the job. Here is a sample:
