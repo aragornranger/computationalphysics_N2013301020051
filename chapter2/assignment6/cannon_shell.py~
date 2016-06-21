@@ -29,6 +29,7 @@ class shell:
         self.vy.append(v * math.sin(theta))
         self.v = v
         self.theta = theta
+        self.degree = theta * 180 / np.pi
         self.t = t
 
     def step_calc(self,step):
@@ -39,12 +40,22 @@ class shell:
         return self.y[-1] + self.vy[-1] * step
 
     def trajectory_calc(self,step):
+        self.tra = 1
     	self.__init__(self.v,self.theta,self.t)
         while self.step_calc(step) > 0:
             continue
 
     def draw_figure(self):
-        plt.plot(self.x,self.y,lw = 1,label = r'$\theta$=%s$^{\circ}$' %self.degree)
+        if self.tra == 1:
+            lab = '$\\theta$=%6.2f$^{\circ}$,no correction' %self.degree
+            line = 'solid'
+        elif self.tra == 2:
+            lab = '$\\theta$=%6.2f$^{\circ}$,drag correction' %self.degree
+            line = 'dashed'
+        else:
+            lab = '$\\theta$=%6.2f$^{\circ}$,density correction' %self.degree
+            line = 'dashdot'
+        plt.plot(self.x,self.y,lw = 1,label = r'%s' %lab,ls = '%s' %line)
         self.maxx = max(max(self.x),self.maxx)
         self.maxy = max(max(self.y),self.maxy)
 
@@ -58,22 +69,15 @@ class shell:
         plt.title(r"Trajectory of a cannon shell,T = %sK" %self.t)
         plt.xlabel('x(km)')
         plt.ylabel('y(km)')
-        plt.legend(loc = 'upper right')
+        plt.legend(loc = 'upper right',fontsize = 'x-small')
+        plt.minorticks_on()
         plt.grid()
 
         plt.show()
-        
-    def show_v(self):
-        return self.v
-
-    def show_theta(self):
-        return self.theta
-
-    def show_theta_degree(self):
-        return self.theta / np.pi * 180
 
     def set_theta(self,tmp):
         self.theta = tmp
+        self.degree = tmp * 180 / np.pi
         
     def set_theta_degree(self,tmp):
     	self.degree = tmp
@@ -92,10 +96,10 @@ class shell:
         
     def trajectory_calc_drag(self,step):
     	self.__init__(self.v,self.theta,self.t)
+        self.tra = 2
         self.vt = self.v
         while self.step_calc(step) > 0:
             self.drag_calc(step)
-            continue
 	
     def density_calc(self,step):
         tmp = (1 - 6.5 * self.y[-2] / self.t) ** 2.5
@@ -105,9 +109,32 @@ class shell:
         
     def trajectory_calc_density(self,step):
         self.__init__(self.v,self.theta,self.t)
+        self.tra = 3
         self.vt = self.v
         while self.step_calc(step) > 0:
             self.density_calc(step)        
-            continue
 
+class shell_firing(shell):
+    def trajectory_calc_altitude(self,step,altitude):
+        self.__init__(self.v,self.theta,self.t)
+        self.tra = 3
+        self.vt = self.v
+        while self.step_calc(step) > altitude or self.vy[-1] > 0:
+            self.density_calc(step)
+        return self.x[-1]
 
+    def find_theta(self,altitude):
+        deg = a
+        xmax = -1
+        degmax = 0
+        while True:
+            self.set_theta_degree(deg)
+            tmp = self.trajectory_calc_altitude(0.01,altitude)
+            print deg,',',tmp
+            if tmp > xmax:
+                degmax = deg
+                xmax = tmp
+                deg += 1
+            else:
+                break
+        return deg
